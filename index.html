@@ -2,17 +2,29 @@
 <!--
   =====================================================================
   ALL SITE CONTENT LIVES IN THIS FILE (one page).
-  Styling: style.css     Theme toggle: theme.js
-  Portrait: assets/portrait.webp
-  Hidden items waiting on you are in HIDDEN comments below.
+  Styling: style.css     Theme toggle: theme.js     Favicon: favicon.svg
+  Portrait: assets/portrait.webp     Share image: assets/og-image.png
   =====================================================================
 -->
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hamid Olatundun · Security researcher &amp; software engineer</title>
-  <meta name="description" content="Hamid Olatundun: security researcher and software engineer working on trusted execution, attestation and verifiable computation.">
+  <title>Abdul-hamid Olatundun (Ola) · Security researcher &amp; software engineer</title>
+  <meta name="description" content="Abdul-hamid Olatundun (Ola Hamid): security researcher and software engineer working on trusted execution, attestation and verifiable computation.">
+
+  <!-- Sharing previews. og:image must be a full URL; update it if the site address changes. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abdul-hamid Olatundun (Ola Hamid)">
+  <meta property="og:description" content="Security researcher and software engineer working on trusted execution, attestation and verifiable computation.">
+  <meta property="og:url" content="https://olahamid.github.io/">
+  <meta property="og:image" content="https://olahamid.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdul-hamid Olatundun (Ola Hamid)">
+  <meta name="twitter:description" content="Security researcher and software engineer working on trusted execution, attestation and verifiable computation.">
+  <meta name="twitter:image" content="https://olahamid.github.io/assets/og-image.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>try{var t=localStorage.getItem("theme")}catch(e){}document.documentElement.dataset.theme=t==="dark"?"dark":"light";</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +39,6 @@
   <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
   <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
   <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.112z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
-  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13H8"/><path d="M16 17H8"/><path d="M16 13h-2"/></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
 </svg>
@@ -39,15 +50,21 @@
 
 <div class="wrap">
 
+<!-- ================================ INTRO ================================ -->
 <header class="intro" id="top">
-  <div class="portrait">
-    <span aria-hidden="true">OH</span>
-    <img src="assets/portrait.webp" alt="Richard Feynman at a blackboard" width="112" height="112" onerror="this.remove()">
+  <div class="portrait-wrap">
+    <button class="portrait" type="button" aria-pressed="false" aria-label="Swap between Feynman's photo and mine">
+      <span aria-hidden="true">OH</span>
+      <img class="photo-feynman" src="assets/portrait.webp" alt="Richard Feynman at a blackboard" width="112" height="112">
+      <img class="photo-me" src="assets/me.webp" alt="Photo of Abdul-hamid Olatundun" width="112" height="112">
+    </button>
+    <p class="portrait-caption" aria-live="polite">Do I look like Feynman?</p>
   </div>
 
   <div>
-    <h1>Hamid Olatundun</h1>
+    <h1>Abdul-hamid Olatundun <span class="aka">(Ola)</span></h1>
     <p class="identity">Security researcher and software engineer based in Nigeria.</p>
+    <p class="notation">verify(claim) ≡ trust</p>
   </div>
 </header>
 
@@ -55,33 +72,26 @@
 
   <section class="bio" aria-label="About me">
     <p>
-      I build and attack systems that have to hold up against adversaries. At Modulo Labs I
-      built the Intel TDX attestation and zero-knowledge proof stack behind
-      <a href="https://gatta.io/">gatta.io</a>, and I've audited protocols where one missed
-      assumption loses user funds. My <a href="https://github.com/olahamid/security-portfolio">security portfolio</a>
+      I build systems that have to hold up against adversaries, and then I try to break them.
+      At Modulo Labs I built the Intel TDX attestation and zero-knowledge stack behind
+      <a href="https://gatta.io/">gatta.io</a>, so anyone can check that a result came from the
+      code that claims to have produced it. I've audited protocols where one missed assumption
+      loses user funds. My <a href="https://github.com/olahamid/security-portfolio">security portfolio</a>
       collects those reports.
     </p>
     <p>
-      As an applied cryptographer, I care about systems where people don't have to take someone's
-      word for it, because they can check. That is what the attestation work at Modulo Labs was for.
-    </p>
-    <p>
-      Teaching matters just as much to me. I've taught cryptography and blockchain development to
-      500+ students across Africa at <a href="#teaching">TechCrush</a>, and I hope to lecture and
-      research full-time.
+      The question I keep coming back to: when a system says "trust me", what can you actually
+      check? I'm trying to build a life answering that question, by building zero-trust systems
+      and breaking untrustworthy ones. I'm studying advanced applied cryptography and an MSc in
+      Computer Science, and I teach cryptography and blockchain development to students across Africa.
     </p>
 
     <p class="interests">
       <span class="label">Interested in</span>
-      TEE attestation · data ownership · research and development of zero-trust systems for AI
+      TEE attestation · data ownership · R & D of zero-trust systems for AI products · ZK, MPC & FHE · DAOAI
     </p>
 
     <div class="actions">
-      <!-- HIDDEN until your PDF exists: put it at assets/cv.pdf, then uncomment.
-      <a class="button" href="assets/cv.pdf" download>
-        <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> Download CV
-      </a>
-      -->
       <ul class="social" aria-label="Elsewhere">
         <li><a href="mailto:abdulhamidjuwon@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
         <li><a href="https://github.com/olahamid" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
@@ -91,39 +101,21 @@
     </div>
   </section>
 
-  <!-- ============================== TEACHING ============================== -->
-  <section id="teaching">
-    <h2>Teaching</h2>
-    <div class="highlight">
-      <h3>TechCrush</h3>
-      <p class="tag">blockchain development &amp; cryptography instructor</p>
-      <p>
-        I've taught 500+ students across Africa and designed the curriculum: hash functions,
-        digital signatures, smart contract security, and the maths behind Uniswap and Aave. I've
-        also organised cohorts for students of the University of Abuja, University of Benin and
-        University of Ilorin.
-      </p>
-      <p>Tutoring started as a new ambition, and coaching and teaching are now part of my long-term goals. I hope to commit to academia full-time one day.</p>
-    </div>
-  </section>
-
   <!-- ================================ WORK ================================ -->
   <section id="work">
-    <h2>Work</h2>
+    <h2><span class="sym" aria-hidden="true">λ</span>Work</h2>
     <div class="grid">
 
       <article class="card wide">
         <h3>Candiid Labs</h3>
         <p class="tag">security researcher / smart contract developer</p>
         <ul class="products">
-          <li><strong>Kesho</strong>, a prediction market on Polygon built on Gnosis's live
-            ConditionalTokens contract, with an FPMM market maker, factory and Chainlink-based resolver
-            in Foundry. Moving the factory to minimal-proxy clones cut per-market deployment from
-            ~4.9M to ~40–50k gas.</li>
+          <li><strong>Kesho</strong>, a prediction market on Polygon built on Gnosis's
+            ConditionalTokens. Switching the market factory to minimal-proxy clones cut per-market
+            deployment from ~4.9M to ~40–50k gas.</li>
           <li><strong>Audit Ledger</strong>, an AI-assisted audit tool built on a Rust
             static-analysis engine with 19 detectors.</li>
-          <li><strong>Salamanda</strong>, an asset tokenisation platform in production, and the
-            SALAM presale system.</li>
+          <li><strong>Salamanda</strong>, an asset tokenisation platform in production.</li>
         </ul>
       </article>
 
@@ -132,25 +124,15 @@
         <p class="tag">smart contract engineer / security researcher</p>
         <p>
           Built an Intel TDX attestation and zero-knowledge stack that ties each campaign's
-          reward root to the code that produced it, verified on-chain. Reviewed every release.
+          reward root to the code that produced it, verified on-chain.
         </p>
         <details>
           <summary>Technical detail</summary>
           <ul>
-            <li>TDX quotes via the Phala dstack SDK (<code>getQuote</code>). Each quote's
-              <code>reportData</code> commits to
-              <code>keccak256(merkleRoot, totalPoints, campaignHash)</code>, and the app's RTMR3
-              is registered on-chain at campaign creation.</li>
-            <li>A Rust proof worker fetches collateral from Automata's on-chain PCCS and runs
-              Automata's DCAP verifier inside the SP1 zkVM, turning a ~5&nbsp;KB quote into a
-              ~256-byte Groth16 proof verified on-chain. PostgreSQL-backed job pipeline with
-              row-level locking, idempotent submission and retries.</li>
-            <li>A Noir (UltraHonk) circuit for anonymous claims, with Solidity verifiers on
-              Sepolia, Base Sepolia and Horizen, proving depth-16 Poseidon Merkle membership, bound to a
-              payout address by a secp256k1 ECDSA signature.</li>
-            <li>Four audit reports on the stack: 17 findings (3 High, 1 Medium, 5 Low, 8 Info/Gas),
-              plus a review of removing SP1 and an end-to-end analysis of the TEE, proof worker
-              and contracts.</li>
+            <li>Intel TDX quotes that commit each campaign's reward root to the code image.</li>
+            <li>A Rust worker that compresses each quote into a small Groth16 proof (SP1 zkVM).</li>
+            <li>A Noir circuit for anonymous reward claims.</li>
+            <li>Four audit reports on the stack, with 17 findings.</li>
           </ul>
           <p class="note">Closed source, but I'm happy to walk through it on a call.</p>
         </details>
@@ -159,25 +141,21 @@
       <article class="card">
         <h3>BubbleFi</h3>
         <p class="tag">co-founder &amp; engineer</p>
-        <p>
-          A decentralised exchange on Monad that reached 1.7M transactions and 500,000+ unique
-          wallets in two weeks on testnet.
-        </p>
+        <p>A decentralised exchange on Monad that reached 1.7M transactions and 500,000+ unique
+          wallets in two weeks on testnet.</p>
       </article>
 
       <article class="card">
         <h3>Bilaad Real Estate</h3>
         <p class="tag">IT officer / backend engineer</p>
-        <p>
-          Built the company website, integrated TTLock smart locks with Odoo ERP for automated
-          attendance, supported 50+ staff and helped digitise 80%+ of operations.
-        </p>
+        <p>Built the company website and integrated smart locks with the Odoo ERP, helping
+          digitise 80%+ of operations.</p>
       </article>
 
       <article class="card">
         <h3>DAO Academy</h3>
         <p class="tag">smart contract engineer</p>
-        <p>Built the Genopets, MEN and Sarcophagus contracts.</p>
+        <p>Smart contract development and testing for partner projects, including Sarcophagus.</p>
       </article>
 
     </div>
@@ -185,7 +163,7 @@
 
   <!-- ========================= RESEARCH & WRITING ========================= -->
   <section id="research">
-    <h2>Research &amp; writing</h2>
+    <h2><span class="sym" aria-hidden="true">∀</span>Research &amp; writing</h2>
     <div class="grid">
 
       <article class="card">
@@ -221,46 +199,38 @@
     </div>
   </section>
 
-  <!-- ============================== EDUCATION ============================= -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>MSc Computer Science</h3>
-        <p class="tag">Veritas University</p>
-      </article>
-      <article class="card">
-        <h3>Applied Cryptography</h3>
-        <p class="tag">Symbolic Software</p>
-      </article>
-      <article class="card">
-        <h3>B.Eng. Mechanical Engineering</h3>
-        <p class="tag">University of Ilorin</p>
-      </article>
-      <article class="card">
-        <h3>Cyfrin Updraft</h3>
-        <p class="tag">blockchain security</p>
-        <p>Smart contract security and auditing, formal verification, Yul, Huff and Rust, and
-          ZK circuits in Noir.</p>
-      </article>
+  <!-- ============================== TEACHING ============================== -->
+  <section id="Academics">
+    <h2><span class="sym" aria-hidden="true">Σ</span>Teaching</h2>
+    <div class="highlight">
+      <h3>TechCrush</h3>
+      <p class="tag">blockchain development &amp; cryptography instructor</p>
+      <p>so far, I've taught 1000+ students across Africa at TechCrush and designed the curriculum, from cryptography foundation(assymetric and symmetric primitives),
+        hash functions ECDSA, and digital signatures to smart contract security. also in my 6th cohorts for
+        students of different Universities across africa ie University of Abuja, University of Benin and University of Ilorin etc.</p>
+      <p>Academics is where I want my career to go: I hope to lecture and research full-time.</p>
     </div>
   </section>
 
-  <!-- ================================ OTHER ===============================
-       HIDDEN until you tell me what goes here: delete the `hidden` attribute.
-  -->
-  <section id="other" hidden>
-    <h2>Other</h2>
-    <div class="grid">
-      <article class="card"><h3>Placeholder</h3><p>Something personal.</p></article>
-      <article class="card"><h3>Placeholder</h3><p>Something personal.</p></article>
+  <!-- ============================ WORK WITH ME ============================ -->
+  <section id="contact">
+    <h2><span class="sym" aria-hidden="true">⊢</span>Work with me</h2>
+    <div class="highlight cta">
+      <p>Hiring, building something that needs to be verifiable, or looking for a cryptography trainer?</p>
+      <div class="cta-buttons">
+        <a class="button" href="mailto:abdulhamidjuwon@gmail.com?subject=CV%20request">Request my CV</a>
+        <a class="button" href="mailto:abdulhamidjuwon@gmail.com?subject=Invitation%20to%20break%20my%20system">Invite me to break</a>
+        <a class="button" href="mailto:abdulhamidjuwon@gmail.com?subject=Training%20enquiry">Discuss training</a>
+      </div>
     </div>
   </section>
+
+  <p class="qed" aria-hidden="true">∎</p>
 
 </main>
 
 <footer>
-  <p>© Hamid Olatundun · <a href="#top">back to top</a></p>
+  <p>© Abdul-hamid Olatundun · <a href="#top">back to top</a></p>
 </footer>
 
 </div>

@@ -17,3 +17,16 @@
     try { localStorage.setItem("theme", next); } catch (e) {}
   });
 })();
+
+// Portrait swap: Feynman <-> me.
+(function () {
+  var button = document.querySelector(".portrait");
+  var caption = document.querySelector(".portrait-caption");
+  if (!button || !caption) return;
+
+  button.addEventListener("click", function () {
+    var mine = button.getAttribute("aria-pressed") !== "true";
+    button.setAttribute("aria-pressed", String(mine));
+    caption.textContent = mine ? "Close enough. Still working on the bongos." : "Do I look like Feynman?";
+  });
+})();
