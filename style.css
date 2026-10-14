@@ -1,6 +1,5 @@
-/* Palette: "Ink & Ember". Light by default; dark via the toggle. */
+/* Palette: "Ink & Ember". Dark by default; light via the toggle. */
 
-:root,
 :root[data-theme="light"] {
   --bg: #f7f4ee;
   --card: #fdfbf7;
@@ -18,6 +17,7 @@
   color-scheme: light;
 }
 
+:root,
 :root[data-theme="dark"] {
   --bg: #101114;
   --card: #17191d;

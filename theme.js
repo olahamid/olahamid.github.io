@@ -1,4 +1,4 @@
-// Light/dark toggle. Light is the default; the choice is remembered per browser.
+// Light/dark toggle. Dark is the default; the choice is remembered per browser.
 (function () {
   var root = document.documentElement;
   var button = document.querySelector(".theme-toggle");
@@ -9,7 +9,7 @@
     button.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
   }
 
-  apply(root.dataset.theme === "dark" ? "dark" : "light");
+  apply(root.dataset.theme === "light" ? "light" : "dark");
 
   button.addEventListener("click", function () {
     var next = root.dataset.theme === "dark" ? "light" : "dark";

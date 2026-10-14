@@ -6,7 +6,7 @@
   Portrait: assets/portrait.webp     Share image: assets/og-image.png
   =====================================================================
 -->
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="https://olahamid.github.io/assets/og-image.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <script>try{var t=localStorage.getItem("theme")}catch(e){}document.documentElement.dataset.theme=t==="dark"?"dark":"light";</script>
+  <script>try{var t=localStorage.getItem("theme")}catch(e){}document.documentElement.dataset.theme=t==="light"?"light":"dark";</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap">
@@ -43,7 +43,7 @@
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
 </svg>
 
-<button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+<button class="theme-toggle" type="button" aria-label="Switch to light mode">
   <svg class="icon i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
   <svg class="icon i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
 </button>
@@ -58,7 +58,7 @@
       <img class="photo-feynman" src="assets/portrait.webp" alt="Richard Feynman at a blackboard" width="112" height="112">
       <img class="photo-me" src="assets/me.webp" alt="Photo of Abdul-hamid Olatundun" width="112" height="112">
     </button>
-    <p class="portrait-caption" aria-live="polite">Do I look like Feynman?</p>
+    <p class="portrait-caption" aria-live="polite">click, Do I look like Feynman?</p>
   </div>
 
   <div>
@@ -107,19 +107,6 @@
     <div class="grid">
 
       <article class="card wide">
-        <h3>Candiid Labs</h3>
-        <p class="tag">security researcher / smart contract developer</p>
-        <ul class="products">
-          <li><strong>Kesho</strong>, a prediction market on Polygon built on Gnosis's
-            ConditionalTokens. Switching the market factory to minimal-proxy clones cut per-market
-            deployment from ~4.9M to ~40–50k gas.</li>
-          <li><strong>Audit Ledger</strong>, an AI-assisted audit tool built on a Rust
-            static-analysis engine with 19 detectors.</li>
-          <li><strong>Salamanda</strong>, an asset tokenisation platform in production.</li>
-        </ul>
-      </article>
-
-      <article class="card">
         <h3><a class="card-link" href="https://gatta.io/">Modulo Labs · gatta.io</a></h3>
         <p class="tag">smart contract engineer / security researcher</p>
         <p>
@@ -136,6 +123,19 @@
           </ul>
           <p class="note">Closed source, but I'm happy to walk through it on a call.</p>
         </details>
+      </article>
+
+      <article class="card">
+        <h3>Candiid Labs</h3>
+        <p class="tag">security researcher / smart contract developer</p>
+        <ul class="products">
+          <li><strong>Kesho</strong>, a prediction market on Polygon built on Gnosis's
+            ConditionalTokens. Switching the market factory to minimal-proxy clones cut per-market
+            deployment from ~4.9M to ~40–50k gas.</li>
+          <li><strong>Audit Ledger</strong>, an AI-assisted audit tool built on a Rust
+            static-analysis engine with 19 detectors.</li>
+          <li><strong>Salamanda</strong>, an asset tokenisation platform in production.</li>
+        </ul>
       </article>
 
       <article class="card">
